@@ -35,7 +35,7 @@ class Solution(object):
                         dp[i][1] = dp[j][1]
                     elif dp[j][0] + 1 == dp[i][0]:
                         dp[i][1] += dp[j][1]
-            max_out = max(max_out, dp[i][1])
+            max_out = max(max_out, dp[i][0])
         out = 0
         for it in dp:
             if it[0] == max_out:
